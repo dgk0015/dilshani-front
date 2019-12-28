@@ -1,0 +1,13 @@
+.bus_card {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.mat-card {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+.fab-icon {
+    padding-left: 15px;
+}

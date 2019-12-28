@@ -1,0 +1,51 @@
+<app-header></app-header>
+
+<div class="container">
+  <div class="row fab-icon bus_card" style="padding-top: 15px;">
+    <button mat-fab color="primary" (click)="openAddNewEmployeeDialg()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h5>Drivers</h5>
+      <hr>
+      <div *ngFor="let driver of employees_list">
+        <div class="row" *ngIf="driver.role==1">
+          <div class="col-md-4 bus_card">
+            <img src="https://buswebp.herokuapp.com/{{driver.imageUrl}}" class="rounded float-left img-responsive emp-img">
+          </div>
+          <div class="col-md-8">
+            <p>Name: {{driver.name}}</p>
+            <p>Mobile No: {{driver.mobile}}</p>
+            <p>License No: {{driver.licenseNumber}}</p>
+            <div class="button-row">
+              <button mat-raised-button>Edit</button>
+              <button mat-raised-button color="warn">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h5>Conducters</h5>
+      <hr>
+      <div *ngFor="let conductor of employees_list">
+          <div class="row" *ngIf="conductor.role==2">
+            <div class="col-md-4 bus_card">
+              <img src="https://buswebp.herokuapp.com/{{conductor.imageUrl}}" class="rounded float-left img-responsive emp-img">
+            </div>
+            <div class="col-md-8">
+              <p>Name: {{conductor.name}}</p>
+              <p>Mobile No: {{conductor.mobile}}</p>
+              <p>License No: {{conductor.licenseNumber}}</p>
+              <div class="button-row">
+                <button mat-raised-button>Edit</button>
+                <button mat-raised-button color="warn">Delete</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

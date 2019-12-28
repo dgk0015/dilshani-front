@@ -1,0 +1,22 @@
+.bus_card {
+    padding-bottom: 40px;
+}
+
+.mat-card {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+.fab-icon {
+    padding-left: 15px;
+}
+
+.button-row button,
+.button-row a {
+  margin-right: 8px;
+}
+
+.emp-img {
+    height:160px; 
+    width:160px;
+}

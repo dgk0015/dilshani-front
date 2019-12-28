@@ -1,0 +1,20 @@
+<div style="text-align:center; padding:100px">
+  <h2>Dilshani Travels</h2>
+  <hr>
+  <h3>Log in</h3>
+  <div class="row">
+    <div class="col-12" align="center">
+      <form class="example-form" [formGroup]="loginForm">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Username" formControlName="username">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Password" formControlName="password">
+        </mat-form-field>
+      </form>
+    </div>
+  </div>
+
+  <button mat-raised-button color="primary" routerLink="/busses">Login</button>
+</div>

@@ -1,0 +1,51 @@
+<!-- <div class="row">
+  <div class="col-12">
+      <h4 mat-dialog-title class="h2">New Bus</h4>
+  </div>
+</div>
+<div class="row">
+  <div class="col-6">
+    <img src="../../assets/imgs/no_image_startup.png" width="250" height="200">
+  </div>
+  <div class="col-6">
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Bus Number" value="">
+      </mat-form-field>
+    </form>
+    <mat-dialog-actions>
+      <button class="mat-raised-button" (click)="add()">Add</button>
+    </mat-dialog-actions>
+  </div>
+
+</div> -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 offset-md-3">
+      <h3>Add New Bus</h3>
+      <br>
+      <div class="form-group">
+        <input matInput placeholder="Bus Number" type="text" #number>
+      </div>
+      <div class="form-group">
+        <input type="file" name="image" (change)="fileProgress($event)" />
+      </div>
+
+      <div *ngIf="fileUploadProgress">
+        Upload progress: {{ fileUploadProgress }}
+      </div>
+      <div class="image-preview mb-3" *ngIf="previewUrl">
+        <img [src]="previewUrl" height="200" width="200" />
+      </div>
+
+      <div class="mb-3" *ngIf="uploadedFilePath">
+        {{uploadedFilePath}}
+      </div>
+
+      <div class="form-group">
+        <button class="btn btn-primary" (click)="onSubmit(number.value)">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>

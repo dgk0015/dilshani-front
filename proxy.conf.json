@@ -1,0 +1,6 @@
+{
+    "/api": {
+      "target": "https://buswebp.herokuapp.com/",
+      "secure": false
+    }
+  }

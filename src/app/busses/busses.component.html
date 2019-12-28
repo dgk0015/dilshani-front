@@ -1,0 +1,23 @@
+<app-header></app-header>
+
+<div class="container">
+  <div class="row fab-icon bus_card">
+    <button mat-fab color="primary" (click)="openAddNewBusDialg()" matTooltip="Add New Bus">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+  <div class="row">
+    <div class="col-3 bus_card" *ngFor="let bus of bus_list">
+      <mat-card (click)="openDailyUpdateDialog(bus)">
+        <img mat-card-image style="height: 150px;" src="https://buswebp.herokuapp.com/{{bus.imageUrl}}">
+        <mat-card-title>
+          {{bus.plateNumber}}
+        </mat-card-title>
+        <!-- <mat-card-content>
+          <label>hhhh</label><br>
+          <label>hhhh</label>
+        </mat-card-content> -->
+      </mat-card>
+    </div>
+  </div>
+</div>

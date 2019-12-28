@@ -1,0 +1,64 @@
+<div class="row">
+  <div class="col-12">
+    <h4 mat-dialog-title class="h2">Daily Update</h4>
+  </div>
+</div>
+<div class="row">
+  <div class="col-3">
+    <img src="../../assets/imgs/no_image_startup.png" width="250" height="200">
+  </div>
+  <div class="col-9">
+    <form class="example-form" [formGroup]="dailyUpdateForm" (ngSubmit)="onSubmit()">
+      <mat-form-field class="example-full-width" class="example-full-width">
+        <input matInput placeholder="Driver Name" value="" formControlName="driverName">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" style="padding-left: 5px;">
+        <input matInput placeholder="Driver Salary" value="" formControlName="driverSalary">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Conducter Name" value="" formControlName="conductorName">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" style="padding-left: 5px;">
+        <input matInput placeholder="Conducter Salary" value="" formControlName="conductorSalary">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Fuel" value="" formControlName="fuel">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" style="padding-left: 5px;">
+        <input matInput placeholder="Additional Exepences" value="" formControlName="additionalExpense">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input type="text" matInput [matDatepicker]="picker1" placeholder="Insurance Exp. Date" formControlName="insuaranceExpiry">
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field class="example-full-width" style="padding-left: 5px;">
+        <input type="text" matInput [matDatepicker]="picker2" placeholder="Licance Exp. Date" formControlName="licenseExpiry">
+        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Tires" value="" formControlName="tires">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" style="padding-left: 5px;">
+        <input matInput placeholder="Services" value="" formControlName="service">
+      </mat-form-field>
+
+      <section class="example-section">
+        <mat-checkbox [disabled]="true" class="example-margin">08:20</mat-checkbox>
+        <mat-checkbox [disabled]="true" class="example-margin">10:15</mat-checkbox>
+        <mat-checkbox [disabled]="true" class="example-margin">08:20</mat-checkbox>
+        <mat-checkbox [disabled]="true" class="example-margin">10:15</mat-checkbox>
+        <mat-checkbox [disabled]="true" class="example-margin">08:20</mat-checkbox>
+        <mat-checkbox [disabled]="true" class="example-margin">10:15</mat-checkbox>
+        <mat-checkbox [disabled]="true" class="example-margin">08:20</mat-checkbox>
+        <mat-checkbox [disabled]="true" class="example-margin">10:15</mat-checkbox>
+      </section>
+
+      <div mat-dialog-actions>
+        <button mat-raised-button [disabled]="!dailyUpdateForm.valid" type="submit">Add</button>
+      </div>
+    </form>
+  </div>
+
+</div>

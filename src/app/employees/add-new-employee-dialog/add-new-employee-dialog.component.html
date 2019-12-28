@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 offset-md-3">
+      <h3>Add New Employee</h3>
+      <br>
+      <div class="form-group">
+        <input matInput placeholder="Name" type="text" #name>
+      </div>
+      <div class="form-group">
+        <select matInput placeholder="Role" type="text" #role>
+          <option value="1">Driver</option>
+          <option value="2">Conducter</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <input matInput placeholder="License Number" type="text" #licNumber>
+      </div>
+      <div class="form-group">
+        <input matInput placeholder="Mobile Number" type="text" #mobNumber>
+      </div>
+      <div class="form-group">
+        <input type="file" name="image" (change)="fileProgress($event)" />
+      </div>
+
+      <div *ngIf="fileUploadProgress">
+        Upload progress: {{ fileUploadProgress }}
+      </div>
+      <div class="image-preview mb-3" *ngIf="previewUrl">
+        <img [src]="previewUrl" height="200" width="200" />
+      </div>
+
+      <div class="mb-3" *ngIf="uploadedFilePath">
+        {{uploadedFilePath}}
+      </div>
+
+      <div class="form-group">
+        <button class="btn btn-primary" (click)="onSubmit(name.value, role.value, licNumber.value, mobNumber.value)">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
